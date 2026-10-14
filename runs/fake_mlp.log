@@ -1,0 +1,16 @@
+42 train / 8 val episodes, 6300 train frames, device=mps
+mlp: 362k params
+step    500  loss 0.0826  val_err 14.213  (7s)
+step   1000  loss 0.0654  val_err 9.754  (17s)
+step   1500  loss 0.0615  val_err 6.336  (26s)
+step   2000  loss 0.0553  val_err 4.086  (34s)
+step   2500  loss 0.0571  val_err 2.674  (43s)
+step   3000  loss 0.0546  val_err 1.811  (53s)
+step   3500  loss 0.0535  val_err 1.301  (62s)
+step   4000  loss 0.0529  val_err 1.004  (71s)
+step   4500  loss 0.0523  val_err 0.836  (79s)
+step   5000  loss 0.0521  val_err 0.748  (88s)
+step   5500  loss 0.0530  val_err 0.704  (96s)
+step   6000  loss 0.0515  val_err 0.683  (105s)
+val joint error vs loops: {1: 0.683}
+saved runs/fake_mlp

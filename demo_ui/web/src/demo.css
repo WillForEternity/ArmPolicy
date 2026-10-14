@@ -1,0 +1,175 @@
+/* ---- demo tab: deliberately plain, reads like a camera app --------------------------------- */
+.demo {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  color: #fff;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, sans-serif;
+  overflow: hidden;
+}
+.demo .feed,
+.demo-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.demo-overlay {
+  pointer-events: none;
+}
+.demo-overlay .breathe {
+  animation: breathe 2.4s ease-in-out infinite;
+}
+@keyframes breathe {
+  50% {
+    opacity: 0.45;
+  }
+}
+.demo-nocam {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 17px;
+}
+.demo::after {
+  /* keep text legible over a bright tablecloth */
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 46%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.72), transparent);
+  pointer-events: none;
+}
+.demo-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px;
+  z-index: 2;
+  font-size: 14px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), transparent);
+}
+.demo-link {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  font-size: 14px;
+}
+.demo-link:hover {
+  color: #fff;
+}
+.demo-where {
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: auto;
+}
+.demo-cam {
+  appearance: none;
+  background: none;
+  border: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  cursor: pointer;
+  max-width: 200px;
+  text-align: right;
+}
+.demo-cam option {
+  color: #000;
+}
+.demo-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 0 24px 56px;
+  text-align: center;
+}
+.demo-bottom h1 {
+  margin: 0;
+  font-size: clamp(30px, 4vw, 52px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  animation: settle 0.35s ease-out;
+}
+@keyframes settle {
+  from {
+    transform: translateY(6px);
+  }
+}
+.demo-bottom p {
+  margin: 8px 0 0;
+  font-size: clamp(15px, 1.4vw, 19px);
+  color: rgba(255, 255, 255, 0.78);
+}
+.grab {
+  margin-top: 30px;
+  height: 66px;
+  padding: 0 38px;
+  border: 0;
+  border-radius: 999px;
+  background: #fff;
+  color: #111;
+  font: inherit;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  transition: transform 0.12s ease, background 0.2s, color 0.2s;
+}
+.grab:active {
+  transform: scale(0.97);
+}
+.grab.stop {
+  background: #e5342b;
+  color: #fff;
+  min-width: 180px;
+}
+.grab:disabled {
+  background: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.75);
+  cursor: default;
+  box-shadow: none;
+}
+.demo-progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background: #fff;
+  transform-origin: left;
+  transition: transform 0.2s linear, opacity 0.4s;
+  z-index: 3;
+}
+.grab-row {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+.grab.quiet {
+  background: rgba(30, 30, 32, 0.85);
+  color: #fff;
+}
+.rec {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.rec i {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ff3b30;
+  animation: breathe 1.4s ease-in-out infinite;
+}

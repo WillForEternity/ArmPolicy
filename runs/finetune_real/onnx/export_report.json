@@ -1,0 +1,23 @@
+{
+ "4": {
+  "fp32_vs_torch": 5.340576171875e-05,
+  "fp32_kb": 666,
+  "mac_ms_fp32": 0.031887776761626206,
+  "int8_ok": false,
+  "int8_error": "[ONNXRuntimeError] : 1 : FAIL : Load model from runs/finetune_real/onnx/policy_k4_int8.onnx failed:Node (node_linear_1_M"
+ },
+ "6": {
+  "fp32_vs_torch": 6.866455078125e-05,
+  "fp32_kb": 682,
+  "mac_ms_fp32": 0.04283902671886608,
+  "int8_ok": false,
+  "int8_error": "[ONNXRuntimeError] : 1 : FAIL : Load model from runs/finetune_real/onnx/policy_k6_int8.onnx failed:Node (node_linear_1_M"
+ },
+ "8": {
+  "fp32_vs_torch": 8.392333984375e-05,
+  "fp32_kb": 697,
+  "mac_ms_fp32": 0.055462223244830966,
+  "int8_ok": false,
+  "int8_error": "[ONNXRuntimeError] : 1 : FAIL : Load model from runs/finetune_real/onnx/policy_k8_int8.onnx failed:Node (node_linear_1_M"
+ }
+}

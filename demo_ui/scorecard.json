@@ -1,0 +1,18 @@
+{
+  "_how": "Edit freely; the UI re-reads this on every open (press S). null = not measured yet. 'on' says where a number was measured; only 'uno-q' counts as on-device.",
+  "baseline": { "name": "Stacked transformer", "detail": "6 independent blocks · FP32" },
+  "optimized": { "name": "Looped transformer", "detail": "1 shared block × K · INT8 weights" },
+  "rows": [
+    { "metric": "Parameters", "unit": "", "baseline": 1196934, "optimized": 205574, "better": "lower", "on": "checkpoint", "note": "counted from runs/fake_*/policy.pt" },
+    { "metric": "Model size", "unit": "KB", "baseline": null, "optimized": 317, "better": "lower", "on": "file", "note": "optimized: policy_k6_int8.onnx · baseline ONNX not exported yet (~4.7 MB at 4 B/param)" },
+    { "metric": "Peak RAM", "unit": "MB", "baseline": null, "optimized": null, "better": "lower", "on": "uno-q", "note": "RSS of the policy server on the board" },
+    { "metric": "Latency / chunk", "unit": "ms", "baseline": null, "optimized": 0.72, "better": "lower", "on": "mac", "note": "Mac, 1 thread, K=6 · board numbers pending" },
+    { "metric": "Throughput", "unit": "chunks/s", "baseline": null, "optimized": null, "better": "higher", "on": "uno-q", "note": "" },
+    { "metric": "Energy / chunk", "unit": "mJ", "baseline": null, "optimized": null, "better": "lower", "on": "uno-q", "note": "USB power meter × latency" },
+    { "metric": "Joint error", "unit": "°", "baseline": 0.89, "optimized": 0.88, "better": "lower", "on": "fake data", "note": "held-out mean |Δ|, fake demos · replace with real-demo eval" }
+  ],
+  "loop_curve": {
+    "source": "val joint error vs K · fake data, 6000 steps",
+    "points": { "1": 1.100, "2": 0.913, "3": 0.881, "4": 0.889, "5": 0.916, "6": 0.952, "7": 0.990, "8": 1.028, "9": 1.067, "10": 1.110, "11": 1.159, "12": 1.216 }
+  }
+}

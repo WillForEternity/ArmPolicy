@@ -1,0 +1,10 @@
+{
+ "_note": "sim_rad from the Isaac session's FK (accurate to ~2-4 deg). Fill real.P1/P2/P3 with the follower's observation.state (LeRobot degrees, torque off) and the gripper real_closed/real_open readings, then: python -m sim_bridge.joint_map fit sim_bridge/poses.json",
+ "sim_rad": {
+  "P1": [0, 1.293, -1.318, 0, 0, 0],
+  "P2": [0, -0.2775, 0.2531, 0, 0, 0],
+  "P3": [-0.6109, -0.2775, 0.2531, 0.6981, -0.7854, 0]
+ },
+ "real": {"P1": null, "P2": null, "P3": null},
+ "gripper": {"sim_closed_rad": -0.1745, "sim_open_rad": 1.745, "real_closed": null, "real_open": null}
+}

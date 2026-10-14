@@ -1,0 +1,47 @@
+{
+ "joints": {
+  "shoulder_pan": {
+   "sign": 1.0,
+   "offset_deg": -9.098932338452588
+  },
+  "shoulder_lift": {
+   "sign": 1.0,
+   "offset_deg": -4.726962058489371
+  },
+  "elbow_flex": {
+   "sign": 1.0,
+   "offset_deg": 5.437634518645803
+  },
+  "wrist_flex": {
+   "sign": 1.0,
+   "offset_deg": 23.452644140585804
+  },
+  "wrist_roll": {
+   "sign": 1.0,
+   "offset_deg": 0.0
+  }
+ },
+ "gripper": {
+  "sim_closed_rad": -0.1745,
+  "sim_open_rad": 1.745,
+  "real_closed": 0.0,
+  "real_open": 100.0
+ },
+ "source": "sim_bridge/calibrate.py from touches.csv",
+ "real_rest_deg": [
+  -9.01189915966382,
+  -102.06712605042001,
+  96.91307563025087,
+  88.48248739495888,
+  -0.1325714285714288,
+  1.061058823529404
+ ],
+ "sim_rest_deg_for_isaac": [
+  0.0870331787887686,
+  -97.34016399193064,
+  91.47544111160506,
+  65.02984325437308,
+  -0.1325714285714288,
+  -10.0
+ ]
+}

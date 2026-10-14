@@ -1,0 +1,23 @@
+{
+ "args": {
+  "data": "fake",
+  "model": "mlp",
+  "out": "runs/fake_mlp",
+  "chunk": 30,
+  "d": 128,
+  "steps": 6000,
+  "batch": 256,
+  "lr": 0.0003,
+  "wd": 0.1,
+  "warmup": 300,
+  "loop_mean": 6.0,
+  "loop_max": 12,
+  "supervise_last": 4,
+  "state_noise": 0.05,
+  "box_noise": 0.05,
+  "seed": 0
+ },
+ "val_err_vs_loops": {
+  "1": 0.683032877203772
+ }
+}

@@ -1,0 +1,16 @@
+42 train / 8 val episodes, 6300 train frames, device=mps
+stacked: 1197k params
+step    500  loss 0.0966  val_err 9.006  (69s)
+step   1000  loss 0.0578  val_err 3.643  (130s)
+step   1500  loss 0.0472  val_err 2.302  (187s)
+step   2000  loss 0.0443  val_err 1.745  (248s)
+step   2500  loss 0.0404  val_err 1.435  (314s)
+step   3000  loss 0.0395  val_err 1.194  (374s)
+step   3500  loss 0.0381  val_err 1.048  (430s)
+step   4000  loss 0.0353  val_err 0.972  (488s)
+step   4500  loss 0.0355  val_err 0.930  (545s)
+step   5000  loss 0.0341  val_err 0.908  (586s)
+step   5500  loss 0.0338  val_err 0.897  (617s)
+step   6000  loss 0.0340  val_err 0.892  (648s)
+val joint error vs loops: {1: 0.892}
+saved runs/fake_stacked

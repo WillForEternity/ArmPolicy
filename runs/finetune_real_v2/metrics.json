@@ -1,0 +1,39 @@
+{
+ "args": {
+  "init": "runs/main_provisional",
+  "real": "datasets/real_pick_ep0",
+  "sim": [
+   "sim_data/sim_episodes_v1_PROVISIONAL.npz",
+   "sim_data/sim_episodes_v2_PROVISIONAL.npz"
+  ],
+  "out": "runs/finetune_real_v2",
+  "real_frac": 0.75,
+  "sim_eps": 1500,
+  "holdout": 2,
+  "steps": 3000,
+  "batch": 256,
+  "lr": 0.0001,
+  "wd": 0.1,
+  "warmup": 100,
+  "loop_mean": 6.0,
+  "loop_max": 12,
+  "supervise_last": 4,
+  "state_noise": 0.05,
+  "box_noise": 0.05,
+  "seed": 0
+ },
+ "init": "runs/main_provisional",
+ "real_train_eps": 19,
+ "real_heldout_eps": 2,
+ "heldout_real_err_before": 15.993760029474894,
+ "heldout_real_err_after": 6.000742355982463,
+ "heldout_real_per_joint_after": [
+  1.7276599407196045,
+  6.911540508270264,
+  11.061100959777832,
+  6.171151161193848,
+  2.652117967605591,
+  7.480883598327637
+ ],
+ "sim_err_after": 3.3177602291107178
+}
